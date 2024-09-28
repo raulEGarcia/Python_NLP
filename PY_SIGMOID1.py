@@ -7,7 +7,7 @@ import numpy as np
 
 
 def sigmoid(z): 
-    '''
+    ''' LIKE AN ON/OFF SWITCH CURVE
 
     Input:
         z: is the input (can be a scalar or an array)
@@ -30,21 +30,29 @@ def sigmoid(z):
 
 # delete below - only verifications - easy to get OVERFLOWS EXP - RUN TIME ERROR
 
+if (sigmoid(0) == 0.5):
+    print('OK - FOR 0 WE HAVE .5')
+else:
+    print('ERROR')
+
+
 def test1():
-   print(sigmoid(0))
+   print("X=0: ",sigmoid(0))
 test1()
 
 def test2():
-   print(sigmoid(1))
+   print("X=1: ",sigmoid(1))
 test2()
 
 def test3():
-   print(sigmoid(-1))
+   print("X=-1: ",sigmoid(-1))
 test3()
 
 def test4():
-   print(sigmoid([0,1,-1]))
+   print("X=[0,1,-1]: ",sigmoid([0,1,-1]))
 test4()
+
+
 
 #
 #def test5():
@@ -53,6 +61,6 @@ test4()
    
 
 def test6():
-   print(sigmoid([-10,-1,0,1,10]))
+   print("X=[-10,-1,0,1,10]: ",sigmoid([-10,-1,0,1,10]))
 test6()
    
