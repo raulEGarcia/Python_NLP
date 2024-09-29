@@ -22,7 +22,7 @@ def sigmoid(z):
     if np.isscalar(z):
        h = 1/(1+math.exp(-z))
     else: 
-       h = [ 1/(1+math.exp(-x)) for x in z ]
+       h = np.array( [ 1/(1+math.exp(-x)) for x in z ] )
 
     ### END CODE HERE ###
     
